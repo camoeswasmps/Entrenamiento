@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>Documento sin título</title> 
+</head>
+  <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">   
+ 
+<script>
+  $(function () {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>
+
+<body> 
+<form id="form1" name="form1" method="post"> 
+<table border="1" id="tabla">
+<tr>
+	<th>noticia</th>
+	<th>fecha</th>
+	<th>activado</th>
+	<th>imagen</th>		
+</tr>
+<tr>
+	<td><input type="box" name="noticias" id="noticas"/></td>
+	<td><input type="date" id="datepicker" /></td>
+	<td><input type="checkbox" name="activo" value="Si" id="si"/>SI<br><input id ="no" type="checkbox" name="activo" value="No"/>NO</td>
+	<td><input type="file" name="img" id="img"/></td>
+
+</tr>	
+
+
+</table>
+<label> 
+<input type="submit" name="button" id="button" value="Guardar" onclick="this.form.action = 'Insertar.php'" /> 
+</label> 
+<label> 
+<input type="submit" name="button2" id="button2" value="Mostrar" onclick="this.form.action = 'muestra.php'" /> 
+</label> 
+<label>
+<input type="submit" value="Enseñar" onclick="this.form.action = 'mostrar.php'"/>	
+</label>
+<script type="text/javascript">
+function myCreateFunction(tabla) {
+    var tabla = document.getElementById("tabla");
+    var newRow = tabla.insertRow(-1);
+    var newCell0 = newRow.insertCell(0);
+    newCell0.innerHTML = '<input type="box" name="noticias" id="noticas"/>';
+    var newCell1 = newRow.insertCell(1);
+    newCell1.innerHTML = '<input type="date" id="datepicker" />';
+    var newCell2 = newRow.insertCell(2);
+    newCell2.innerHTML = '<input type="checkbox" name="activo" value="Si" id="si"/>SI<br><input id ="no" type="checkbox" name="activo" value="No"/>NO';
+    var newCell3 = newRow.insertCell(3);
+    newCell3.innerHTML = '<input type="file" name="img" id="img"/>';
+
+    
+	  
+ 	
+}
+</script>
+
+<label>
+<input type="button" onclick="myCreateFunction()" value="Añadir nueva noticia" />
+</label>
+
+</form> 
+
+</body> 
+</html>
