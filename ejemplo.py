@@ -1,0 +1,2 @@
+print ('Goodbye, cruel world!')
+
